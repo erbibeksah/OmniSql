@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Omniservices.Packages.DataBase</PackageId>
+    <Version>1.0.1</Version>
+    <Author>OmniServices</Author>
+    <Product>DataBase Management</Product>
+  </PropertyGroup>
+	<ItemGroup Condition="'$(MSBuildProjectExtension)' != '.dcproj'">		
+	</ItemGroup>
+</Project>
