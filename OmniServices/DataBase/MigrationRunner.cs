@@ -62,9 +62,12 @@ public class MigrationRunnerHelper
                 else
                     rb.AddSqlServer();
 
-                rb.WithGlobalConnectionString(_connectionString)
-                  .ScanIn(Assembly.GetExecutingAssembly()).For.Migrations()
-                  .ScanIn(Assembly.GetExecutingAssembly()).For.EmbeddedResources();
+                rb.WithGlobalConnectionString(_connectionString);
+                foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+                {
+                    rb.ScanIn(assembly).For.Migrations();
+                    rb.ScanIn(Assembly.GetExecutingAssembly()).For.EmbeddedResources();
+                }
             })
             .AddLogging(lb =>
             {
