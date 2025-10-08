@@ -27,6 +27,7 @@
   <ItemGroup>
     <PackageReference Include="FluentMigrator" />
     <PackageReference Include="FluentMigrator.Runner" />
+    <PackageReference Include="FluentMigrator.Runner.Core" />
     <PackageReference Include="Microsoft.Data.SqlClient" />
     <PackageReference Include="Microsoft.Extensions.Configuration" />
     <PackageReference Include="Microsoft.Extensions.Hosting" />

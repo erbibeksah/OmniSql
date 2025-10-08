@@ -1,12 +1,12 @@
-﻿global using System.Data;
+﻿// System
+global using System.Data;
 global using System.Data.Common;
 global using System.Globalization;
 global using Microsoft.Data.SqlClient;
 global using System.Transactions;
 global using Microsoft.Extensions.Configuration;
-
-// System
 global using System.Reflection;
+
 
 // Microsoft
 global using Microsoft.Extensions.DependencyInjection;
@@ -18,5 +18,4 @@ global using Serilog;
 global using Serilog.Events;
 
 // FluentMigrator
-global using FluentMigrator;
 global using FluentMigrator.Runner;
