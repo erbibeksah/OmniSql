@@ -4,7 +4,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Omniservices.Packages.DataBase</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Author>OmniServices</Author>
     <Product>DataBase Management</Product>
   </PropertyGroup>
