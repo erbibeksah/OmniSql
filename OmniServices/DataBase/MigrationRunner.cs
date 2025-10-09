@@ -49,7 +49,7 @@ public class MigrationRunnerHelper
     /// </summary>
     /// <remarks>
     /// The method does the following:
-    /// - Configures a <see cref="ServiceCollection"/> with FluentMigrator 
+    /// - Configures a <see cref="ServiceCollection"/> with FluentMigrator
     /// </remarks>
     public void RunMigrations()
     {
