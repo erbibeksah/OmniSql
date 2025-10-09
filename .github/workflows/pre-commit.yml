@@ -25,14 +25,17 @@ jobs:
       # Step 3: Restore dependencies
       - name: 📦 Restore dependencies
         run: dotnet restore
+        working-directory: OmniServices
 
       # Step 4: Check code format (linting)
       - name: 🎨 Lint check using dotnet format
         run: dotnet format --verify-no-changes
+        working-directory: OmniServices
 
       # Step 5: Build solution
       - name: 🧱 Build project
         run: dotnet build --no-restore --configuration Release
+        working-directory: OmniServices
 
       # Step 6: Run unit tests
       # - name: 🧪 Run unit tests
