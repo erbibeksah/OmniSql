@@ -73,6 +73,13 @@ In `Appsettings.json`:
     "DataProvider": "Microsoft.Data.SqlClient"
   }
 ```
+### for postgresql
+```bash
+"AppSettings": {
+    "DataProvider": "Npgsql"
+  }
+```
+### for connection string
 ```bash
  "ConnectionStrings": {
     "ConnectionString": "write-your-own-connection-string"
