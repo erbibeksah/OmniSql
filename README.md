@@ -512,7 +512,7 @@ Found a bug? Have a cool feature idea? Contributions make the open-source world 
 
 ## 📄 License
 
-This project is licensed under the **MIT License** ([LICENSE-MIT](LICENSE-MIT)) - simple, permissive, and developer-friendly!
+This project is licensed under the **MIT License** ([LICENSE-MIT](LICENSE)) - simple, permissive, and developer-friendly!
 
 ---
 
