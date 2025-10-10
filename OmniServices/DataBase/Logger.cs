@@ -54,7 +54,7 @@ public interface ILoggerService
     /// </summary>
     /// <param name="message">The error message to record.</param>
     /// <param name="ex">Optional exception whose details will be included in the log entry.</param>
-    void Error(string message, Exception ex = null);
+    void Error(string message, Exception? ex = null);
 }
 
 /// <summary>
@@ -103,7 +103,7 @@ public class LoggerService : ILoggerService
             .MinimumLevel.Override("FluentMigrator", LogEventLevel.Debug)
             .Enrich.FromLogContext()
             .WriteTo.File(_logFilePath, rollingInterval: RollingInterval.Infinite,
-                          outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}]  {Message:lj}{NewLine}")
+                          outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}]  {Message:lj}{NewLine}{Exception}")
             .CreateLogger();
     }
 
@@ -142,10 +142,10 @@ public class LoggerService : ILoggerService
     /// </summary>
     /// <param name="message">The error message to record.</param>
     /// <param name="ex">Optional exception whose details will be logged alongside the message.</param>
-    public void Error(string message, Exception ex = null)
+    public void Error(string message, Exception? ex = null)
     {
         if (ex != null)
-            Log.Error(ex, message);
+            Log.Error(ex, "{Message}", message);
         else
             Log.Error(message);
     }

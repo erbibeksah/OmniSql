@@ -53,6 +53,11 @@ public class MigrationRunnerHelper
     /// </remarks>
     public void RunMigrations()
     {
+        if (string.IsNullOrWhiteSpace(_connectionString) || string.IsNullOrEmpty(_connectionString))
+        {
+            _logger.Error("=== Migration Status::Connection string is empty! Migration aborted. ===");
+            return;
+        }
         var serviceProvider = new ServiceCollection()
             .AddFluentMigratorCore()
             .ConfigureRunner(rb =>
@@ -91,9 +96,9 @@ public class MigrationRunnerHelper
                 _logger.Warn("=== Migration Status::No migrations to apply! ===");
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            _logger.Error("=== Migration Status::Migration failed! ===", ex);
+            _logger.Error("=== Migration Status::Migration failed! ===");
         }
     }
 }
