@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 ### [Final Release version]
-## [1.0.4] - 2025-10-10
+## [2.0.0] - 2025-10-11
 ### Fixed
 - 🔧 [Component/Module]: Handled the exception `FluentMigrator.Runner` and can able to see the logs inside Application Log Folder.
 
