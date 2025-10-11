@@ -1,5 +1,6 @@
 ﻿#region external dependencies
 global using FluentMigrator.Runner;
+global using FluentMigrator.Runner.Exceptions;
 global using Microsoft.Data.SqlClient;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;

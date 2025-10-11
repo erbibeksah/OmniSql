@@ -96,6 +96,10 @@ public class MigrationRunnerHelper
                 _logger.Warn("=== Migration Status::No migrations to apply! ===");
             }
         }
+        catch (MissingMigrationsException)
+        {
+            _logger.Warn("=== Migration Status::No migrations were found. Skipping migration. ===");
+        }
         catch (Exception)
         {
             _logger.Error("=== Migration Status::Migration failed! ===");
