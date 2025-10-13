@@ -979,6 +979,13 @@ public static class DB
     #endregion
     public static string GetConnectionString()
     {
-        return AppSettingFile.GetConnection("ConnectionString") ?? "";
+        if (AppSettingFile.Get("IsEncryptedConnString").Equals("Y", StringComparison.OrdinalIgnoreCase))
+        {
+            return Security.AcDec(AppSettingFile.GetConnection("ConnectionString") ?? "");
+        }
+        else
+        {
+            return AppSettingFile.GetConnection("ConnectionString") ?? "";
+        }
     }
 }
