@@ -16,4 +16,6 @@ global using System.Data.Common;
 global using System.Globalization;
 global using System.Reflection;
 global using System.Transactions;
+global using System.Security.Cryptography;
+global using System.Text;
 #endregion
