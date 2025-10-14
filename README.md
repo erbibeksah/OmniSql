@@ -214,6 +214,22 @@ await app.RunAsync();
 
 ### Connection Helper
 - `GetConnectionString()`: Gets the connection string from configuration.
+- `In Appsettins.json - IsEncryptedConnString = Y` then the encrypted connection string will take and system by default decrypt and uses inside the system.
+```bash
+ "AppSettings": {
+  "DataProviderpgsql": "Npgsql",
+  "DataProvider": "Microsoft.Data.SqlClient",
+  "IsEncryptedConnString": "Y",
+  "EncryptionActionKey": "your-32-bytes-(AES-256)-key",
+  "EncryptionActionIV": "your-12-bytes-(recommended-for-AES-GCM)-bit-iv"
+},
+```
+
+### Encryption-Decryption Helper
+- `AcEnc(string data)`: Encrypt the plain-tetx and returns a `enc-string`.
+- `Encrypt(string data, string key, string iv)`: Encrypt the plain-tetx with your own key and iv and returns a `enc-string`.
+- `AcDec(string data)`: Decrypt the Encrypted String and returns a `dec-string`.
+- `Decrypt(string data, string key, string iv)`: Decrypt the Encrypted String with your own key and iv and returns a `dec-string`.
 
 ---
 
