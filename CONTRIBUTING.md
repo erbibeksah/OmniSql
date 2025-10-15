@@ -52,7 +52,7 @@ Thank you for your interest in contributing to **OmniSql**! Your help makes this
 
 ## 🛠️ Coding Guidelines
 
-- **.NET 9 / C# 12**: Use modern language features.
+- **.NET 10 / C# 12**: Use modern language features.
 - **GlobalUsings.cs:** Centralize your `using` directives for cleaner code. Add `global using DataBase;` in your project root for instant access to OmniSql nuget package Uses.
 - **Centralized Package Management:** Use the solution-level `Directory.Packages.props` or your `.csproj` for NuGet dependencies. Keep packages up-to-date and consistent.
 - **Configuration Practices:** Store settings in `appsettings.json` (e.g., connection strings, provider names). Use `AppSettingFile.Initialize(builder.Configuration);` for loading configuration globally.
