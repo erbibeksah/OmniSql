@@ -12,7 +12,7 @@
 ![NuGet Version](https://img.shields.io/nuget/v/Omniservices.Packages.DataBase.svg)
 ![NuGet Downloads](https://img.shields.io/nuget/dt/Omniservices.Packages.DataBase.svg)
 ![License](https://img.shields.io/github/license/erbibeksah/OmniSql)
-[![C#](https://img.shields.io/badge/C%23-12.0%2F.NET%209-blueviolet)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![C#](https://img.shields.io/badge/C%23-12.0%2F.NET%2010-blueviolet)](https://learn.microsoft.com/en-us/dotnet/csharp/)
 [![GitHub](https://img.shields.io/badge/github-erbibeksah/OmniSql-blue.svg)](https://github.com/erbibeksah/OmniSql)
 
 <p>
@@ -475,7 +475,7 @@ public class AuthController : BaseApiController
 
 ### Prerequisites
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - Supported database server (MSSQL or PostgreSQL)
 
 ### Installation
